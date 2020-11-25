@@ -11,6 +11,8 @@
 |
 */
 
+
+/*
 Route::get('/welcome', function () {
     return view('welcome');
 });
@@ -19,7 +21,7 @@ Route::get('/master', function(){
     return view('admin.layout.master');
 });
 
-/*
+
 //SOAL 1
 Route::get('/', function(){
     return view('konten.index');
@@ -35,16 +37,21 @@ Route::get('/data-tables', function(){
 
 */
 
-Route::get('/pertanyaan', 'PertanyaanController@index');
+//NAMA CONTROLLERNYA PERTANYAAN
+// Route::get('/pertanyaan', 'PertanyaanController@index');
 
-Route::get('/pertanyaan/create', 'PertanyaanController@create');
+// Route::get('/pertanyaan/create', 'PertanyaanController@create');
 
-Route::post('/pertanyaan', 'PertanyaanController@store');
+// Route::post('/pertanyaan', 'PertanyaanController@store');
 
-Route::get('pertanyaan/{id}', 'PertanyaanController@show');
+// Route::get('pertanyaan/{id}', 'PertanyaanController@show');
 
-Route::get('pertanyaan/{id}/edit', 'PertanyaanController@edit');
+// Route::get('pertanyaan/{id}/edit', 'PertanyaanController@edit');
 
-Route::put('pertanyaan/{id}', 'PertanyaanController@update');
+// Route::put('pertanyaan/{id}', 'PertanyaanController@update');
 
-Route::delete('pertanyaan/{id}', 'PertanyaanController@destroy');
+// Route::delete('pertanyaan/{id}', 'PertanyaanController@destroy');
+
+
+//NAMA CONTROLLERNYA PERTANYAAN 1
+Route::resource('pertanyaan', 'Pertanyaan1Controller');
